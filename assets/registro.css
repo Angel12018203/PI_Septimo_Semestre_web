@@ -19,7 +19,7 @@
     /* Sección izquierda con el fondo */
     .left-section {
       flex: 0 0 40%;
-      background: url('/PI_Septimo_Semestre/img/logo5.png') no-repeat center center/cover;
+      background: url('/img/logo5.png') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
