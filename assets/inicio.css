@@ -1,0 +1,213 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+}
+
+/* Barra de navegación fija */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(218, 210, 210, 0.418);
+  padding: 20px 12px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+}
+
+.navbar img {
+  height: 90px;
+  position: absolute;
+  left: 30px;
+}
+
+.navbar a {
+  color: rgba(39, 33, 33, 0.836);
+  text-decoration: none;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Sección 1 con imagen de fondo */
+.seccion-imagen-1 {
+  background-image: url('/PI_Septimo_Semestre/img/imagen_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 100px;
+  position: relative;
+}
+
+.texto-izquierda {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  opacity: 0;
+  animation: barrido 2s ease-out forwards;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes barrido {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+/* Sección de estadísticas */
+.seccion-logro {
+  background-color: #494545;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.seccion-logro h2 {
+  color: #57d8ff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.logro-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logro-item {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.logro-item h3 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.logro-item p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Estilos para la galería */
+.galeria-container {
+  padding: 60px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.galeria-container h2 {
+  font-size: 2.5rem;
+  color: #57d8ff;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.slider .imagenes {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slider .imagenes img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 15px;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.slider .imagenes img:last-child {
+  margin-right: 0;
+}
+
+/* Flechas de navegación */
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* Nueva sección con fondo gris y logo */
+.seccion-logo {
+  background-color: #494545;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 120px;
+}
+
+.linea-separadora {
+  border-left: 2px solid #57d8ff;
+  height: 100%;
+}
+
+.text-container {
+  flex: 0 0 70%;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 20px;
+}
+

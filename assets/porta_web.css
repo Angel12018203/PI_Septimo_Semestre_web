@@ -1,0 +1,128 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Parte superior: Bienvenida */
+header {
+    background-color: #918989;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* Mensaje de bienvenida */
+.welcome-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.welcome-text h1 {
+    margin: 0;
+}
+
+.welcome-text p {
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 120px); /* Resta la altura del header */
+}
+
+/* Lado izquierdo (30%) */
+.left-sidebar {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #ddd;
+    box-sizing: border-box;
+}
+
+.left-sidebar img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.student-info {
+    text-align: center;
+}
+
+.student-info h2 {
+    margin-bottom: 10px;
+}
+
+.student-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.student-info input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Lado derecho (70%) */
+.right-content {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.right-content h2 {
+    color: #494545;
+}
+
+.right-content section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-content ul li {
+    margin: 10px 0;
+}
+
+/* Estilo para los botones */
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.button-container button {
+    background-color: #4accff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #4accff;
+}
+
