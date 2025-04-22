@@ -7,9 +7,20 @@
   <!-- Fuente League Spartan -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/login.css">
+  <link rel="stylesheet" href="/assets/navegador_login.css">
+
   
 </head>
 <body>
+
+  <!-- Barra de navegación -->
+  <div class="navbar">
+    <img src="/img/reeduca.png" href="/Vista/inicio.html" alt="Logotipo">
+    <a href="/Vista/inicio.html">Inicio</a>
+    <a href="/Vista/Portal_educativo.html">Portal Educativo</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Contacto</a>
+  </div>
 
   <!-- Contenedor principal dividido en dos secciones -->
   <div class="container">
@@ -25,7 +36,7 @@
       <div class="form-container">
         <h2>Iniciar sesión</h2>
         <form action="#" method="post">
-          <input type="text" name="username" placeholder="Nombre de usuario o correo" required>
+          <input type="text" name="username" placeholder="Correo electrónico" required>
           <input type="password" name="password" placeholder="Contraseña" required>
           <button type="submit">Iniciar sesión</button>
         </form>
