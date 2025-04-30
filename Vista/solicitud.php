@@ -5,6 +5,7 @@
   <title>Formulario ReEduca</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-light">
 
@@ -14,21 +15,21 @@
       <h3><i class="bi bi-file-earmark-text"></i> Solicitud de Reinserción Académica</h3>
     </div>
     <div class="card-body">
-      <form action="procesar_solicitud.php" method="POST">
+      <form id="formSolicitud" action="../Modelo/procesar_solicitud.php" method="POST" novalidate>
 
         <div class="mb-3">
           <label for="nombre" class="form-label"><i class="bi bi-person-fill"></i> Nombre completo:</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" required>
+          <input type="text" class="form-control" id="nombre" name="nombre" required pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$">
         </div>
 
         <div class="mb-3">
           <label for="documento" class="form-label"><i class="bi bi-credit-card-2-front"></i> Número de documento:</label>
-          <input type="text" class="form-control" id="documento" name="documento" required>
+          <input type="text" class="form-control" id="documento" name="documento" required pattern="^\d{5,15}$">
         </div>
 
         <div class="mb-3">
           <label for="telefono" class="form-label"><i class="bi bi-telephone-fill"></i> Teléfono (opcional):</label>
-          <input type="text" class="form-control" id="telefono" name="telefono">
+          <input type="text" class="form-control" id="telefono" name="telefono" pattern="^\d{7,15}$">
         </div>
 
         <div class="mb-3">
@@ -40,38 +41,10 @@
           <label for="departamento" class="form-label"><i class="bi bi-geo-alt-fill"></i> Departamento donde vive:</label>
           <select class="form-select" id="departamento" name="departamento" required>
             <option value="">Seleccione un departamento</option>
-            <option value="Amazonas">Amazonas</option>
-            <option value="Antioquia">Antioquia</option>
-            <option value="Arauca">Arauca</option>
-            <option value="Atlántico">Atlántico</option>
-            <option value="Bolívar">Bolívar</option>
-            <option value="Boyacá">Boyacá</option>
-            <option value="Caldas">Caldas</option>
-            <option value="Caquetá">Caquetá</option>
-            <option value="Casanare">Casanare</option>
-            <option value="Cauca">Cauca</option>
-            <option value="Cesar">Cesar</option>
-            <option value="Chocó">Chocó</option>
-            <option value="Córdoba">Córdoba</option>
-            <option value="Cundinamarca">Cundinamarca</option>
-            <option value="Guainía">Guainía</option>
-            <option value="Guaviare">Guaviare</option>
-            <option value="Huila">Huila</option>
             <option value="La Guajira">La Guajira</option>
-            <option value="Magdalena">Magdalena</option>
-            <option value="Meta">Meta</option>
-            <option value="Nariño">Nariño</option>
-            <option value="Norte de Santander">Norte de Santander</option>
-            <option value="Putumayo">Putumayo</option>
-            <option value="Quindío">Quindío</option>
-            <option value="Risaralda">Risaralda</option>
-            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-            <option value="Santander">Santander</option>
-            <option value="Sucre">Sucre</option>
-            <option value="Tolima">Tolima</option>
-            <option value="Valle del Cauca">Valle del Cauca</option>
-            <option value="Vaupés">Vaupés</option>
-            <option value="Vichada">Vichada</option>
+            <option value="Chocó">Chocó</option>
+            <option value="Antioquia">Antioquia</option>
+            <!-- Agrega más según necesites -->
           </select>
         </div>
 
@@ -97,12 +70,12 @@
 
         <div class="mb-3">
           <label for="mensaje" class="form-label"><i class="bi bi-chat-left-text-fill"></i> Cuéntenos su caso o necesidad:</label>
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escriba con ayuda si necesita..."></textarea>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escriba con ayuda si necesita..." required></textarea>
         </div>
 
         <div class="d-grid gap-2">
           <button type="submit" class="btn btn-success btn-lg">
-            <i class="bi bi-send-fill"></i> Enviar solicitud
+            <i class="bi bi-send-fill me-1"></i> Enviar solicitud
           </button>
         </div>
 
@@ -110,7 +83,7 @@
     </div>
   </div>
 </div>
-
+<script src="../assets/alerta.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

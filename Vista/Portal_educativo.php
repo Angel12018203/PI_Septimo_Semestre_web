@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Educativo para Estudiantes</title>
-   <link rel="stylesheet" href="/assets/porta_web.css">
-   <link rel="icon" href="/img/icono_de_icon_web_probando_formato_icon.ico">
+   <link rel="stylesheet" href="../assets/porta_web.css">
+   <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
 </head>
 <body>
     <header>
         <!-- Logo en la parte superior izquierda -->
         <div class="logo">
-            <img src="/img/reeduca.png" href="/Vista/inicio.html"  alt="Logo">
-        </div>
+            <a href="../Vista/inicio.php">
+            <img src="../img/reeduca.png" alt="Logo">
+        </a>
+    </div>
+
 
         <!-- Mensaje de bienvenida centrado -->
         <div class="welcome-text">

@@ -6,9 +6,9 @@
 
   <!-- Fuente League Spartan -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/login.css">
-  <link rel="stylesheet" href="/assets/navegador_login.css">
-  <link rel="icon" href="/img/icono_de_icon_web_probando_formato_icon.ico">
+  <link rel="stylesheet" href="../assets/login.css">
+
+  <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
 
   
 </head>
@@ -16,9 +16,9 @@
 
   <!-- Barra de navegación -->
   <div class="navbar">
-    <img src="/img/reeduca.png" href="/Vista/inicio.html" alt="Logotipo">
-    <a href="/Vista/inicio.html">Inicio</a>
-    <a href="/Vista/Portal_educativo.html">Portal Educativo</a>
+    <img src="../img/reeduca.png" href="../Vista/inicio.php" alt="Logotipo">
+    <a href="../Vista/inicio.php">Inicio</a>
+    <a href="../Vista/Portal_educativo.php">Portal Educativo</a>
     <a href="#">Acerca de</a>
     <a href="#">Contacto</a>
   </div>
@@ -32,7 +32,7 @@
     <!-- Sección derecha con el formulario de login -->
     <div class="right-section">
       <div class="logo-container">
-        <img src="/img/reeduca.png" alt="Logo">
+        <img src="../img/reeduca.png" alt="Logo">
       </div>
       <div class="form-container">
         <h2>Iniciar sesión</h2>
@@ -42,7 +42,7 @@
           <button type="submit">Iniciar sesión</button>
         </form>
         <a href="#">¿Olvidaste tu contraseña?</a>
-        <a href="/Vista/registro.html">¿No tienes cuenta? Regístrate</a>
+        <a href="../Vista/registro.php">¿No tienes cuenta? Regístrate</a>
       </div>
     </div>
 

@@ -46,7 +46,7 @@ body {
 
 /* Sección 1 con imagen de fondo */
 .seccion-imagen-1 {
-  background-image: url('/img/imagen_2.jpg');
+  background-image: url('../img/imagen_2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
