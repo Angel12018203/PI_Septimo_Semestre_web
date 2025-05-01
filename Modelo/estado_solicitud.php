@@ -76,7 +76,7 @@ try {
         </div>
 
         <div class="text-center">
-            <a href="formulario.php" class="btn btn-secondary mt-3">Nueva Solicitud</a>
+            <a href="../Vista/solicitud.php" class="btn btn-secondary mt-3">Nueva Solicitud</a>
         </div>
 
     </div>

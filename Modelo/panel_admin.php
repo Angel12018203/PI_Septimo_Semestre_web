@@ -40,6 +40,7 @@ try {
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Documento</th>
+                <th>Mensaje</th>
                 <th>Estado</th>
                 <th>Observación</th>
                 <th>Acciones</th>
@@ -51,6 +52,7 @@ try {
                     <td><?= $solicitud['id'] ?></td>
                     <td><?= $solicitud['nombre'] ?></td>
                     <td><?= $solicitud['documento'] ?></td>
+                    <td><?= nl2br(htmlspecialchars($solicitud['mensaje'])) ?></td> 
                     <td>
                         <!-- Mostrar el estado de la solicitud con color basado en su estado -->
                         <span class="badge 
