@@ -45,8 +45,8 @@
         <a href="../Vista/registro.php">¿No tienes cuenta? Regístrate</a>
       </div>
     </div>
-
   </div>
 
 </body>
 </html>
+
