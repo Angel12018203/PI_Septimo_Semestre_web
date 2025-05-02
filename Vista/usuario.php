@@ -39,7 +39,7 @@ $sesion_activa = isset($_SESSION['id_usuario']);
   <main class="main-content">
     <h1>Bienvenido a tu panel</h1>
     <p>Por favor completa tu información para poder realizar solicitudes.</p>
-    <a class="btn-completar" href="completar_datos.php">Completar Información</a>
+    <a class="btn-completar" href="../Vista/completar_datos.php">Completar Información</a>
   </main>
 
 </body>
