@@ -14,7 +14,7 @@ CREATE TABLE usuarios(
 	nombre_usuario VARCHAR(40) NOT NULL,
 	apellido_usuario VARCHAR(40) NOT NULL,
 	correo_usuario VARCHAR(80) NOT NULL UNIQUE,
-	password_usuario VARCHAR(50) NOT NULL,
+	password_usuario VARCHAR(255) NOT NULL,
 	celular	VARCHAR(10),
 	departamento VARCHAR(50) NOT NULL,
 	ciudad VARCHAR(50) NOT NULL,

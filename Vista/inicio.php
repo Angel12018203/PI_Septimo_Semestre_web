@@ -8,8 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/inicio.css">
   <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
-
- 
 </head>
 <body>
 
@@ -20,6 +18,8 @@
     <a href="../Vista/Portal_educativo.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
     <a href="#">Acerca de</a>
     <a href="#">Contacto</a>
+    <a href="../Vista/Login.php">Iniciar Sesión</a>
+    <a href="../Vista/registro.php"> Registrarse</a>
   </div>
 
   <!-- Sección 1 -->

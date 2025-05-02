@@ -20,6 +20,8 @@
     <a href="../Vista/Portal_educativo.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
     <a href="#">Acerca de</a>
     <a href="#">Contacto</a>
+    <a href="../Vista/Login.php">Iniciar Sesión</a>
+    <a href="../Vista/registro.php"> Registrarse</a>
   </div>
 
   <!-- Sección 1 -->
