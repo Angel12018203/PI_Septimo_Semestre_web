@@ -32,3 +32,12 @@
         const answers = document.querySelectorAll(".faq-answer");
         answers.forEach(ans => ans.style.display = "none");
     });
+
+
+// Si el usuario vuelve a la pestaña o regresa con botón atrás,
+// recargamos la página para forzar verificación de sesión validando la sesion.
+window.addEventListener("pageshow", function (event) {
+    if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        location.reload();
+    }
+});
