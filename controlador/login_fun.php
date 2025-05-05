@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica si la solicitud es de ti
                 $_SESSION['usuario'] = $email; // Almacena el correo en la sesión
                 $_SESSION['nombre_usuario'] = $nombres; // Almacena el nombre en la sesión
                 $_SESSION['id_usuario'] = $id_usuario; // Almacena el ID en la sesión
-                header("Location: ../Vista/usuario.php"); // Redirige a la vista de usuario
+                header("Location: ../Vista/pagina_principal.php"); // Redirige a la vista de usuario
                 exit();
             } else {
                 // Contraseña incorrecta

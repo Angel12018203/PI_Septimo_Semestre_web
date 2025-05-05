@@ -1,0 +1,7 @@
+ReEduca2025.1
+
+
+sqp_024bccf561db676870d3b1a1951f7db237d7fff7
+
+
+sonar-scanner.bat -D"sonar.projectKey=ReEduca" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqp_bc9e85b51d39286d9a28379e6a5277ec49f31ffc"

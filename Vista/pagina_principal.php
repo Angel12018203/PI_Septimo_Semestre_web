@@ -31,7 +31,7 @@
                 <a href="#" class="dropbtn">👤Mi Perfil</a>
                 <div class="dropdown-content">
                     <a href="#">Mi Información</a>
-                    <a href="#">Cerrar Sesión</a>
+                    <a href="../controlador/logout.php">Cerrar Sesión</a>
                 </div>
             </li>
         </ul>
