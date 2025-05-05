@@ -23,12 +23,10 @@ if(isset($_SESSION['id_usuario'])){
     <img src="../img/reeduca.png" alt="Logotipo de ReEduca">
   </a>
   <div class="nav-links">
-    <a href="../Vista/inicio.php">Inicio</a>
+    <a href="../Vista/index.php">Inicio</a>
     <a href="../Vista/Portal_educativo.php">Portal Educativo</a>
     <a href="#">Acerca de</a>
     <a href="#">Contacto</a>
-    <a href="../Vista/Login.php">Iniciar Sesión</a>
-    <a href="../Vista/registro.php"> Registrarse</a>
   </div>
 </nav>
 

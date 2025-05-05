@@ -21,13 +21,11 @@ if(isset($_SESSION['id_usuario'])){
 
   <!-- Barra de navegación -->
   <div class="navbar">
-    <img src="../img/reeduca.png" href="../Vista/inicio.php" alt="Logotipo">
-    <a href="../Vista/inicio.php">Inicio</a>
-    <a href="../Vista/Portal_educativo.php">Portal Educativo</a>
+    <img src="../img/reeduca.png" href="../Vista/index.php"   alt="Logotipo">
+    <a href="../Vista/index.php">Inicio</a>
+    <a href="../Vista/Login.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
     <a href="#">Acerca de</a>
     <a href="#">Contacto</a>
-    <a href="../Vista/Login.php">Iniciar Sesión</a>
-    <a href="../Vista/registro.php"> Registrarse</a>
   </div>
 
   <!-- Contenedor principal dividido en dos secciones -->
