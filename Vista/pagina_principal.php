@@ -1,12 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: Login.php");
-    exit();
-}
-
-$sesion_activa = isset($_SESSION['id_usuario']);
-?>
+<?php require_once '../controlador/validacion_sesion.php';?>
 
 
 <!DOCTYPE html>
@@ -30,9 +22,9 @@ $sesion_activa = isset($_SESSION['id_usuario']);
             <ul>
                 <li></li>
                 <li><a href="pagina_principal.php">🏠Página Principal</a></li>
-                <li><a href="#">📝Solicitudes</a></li>
-                <li><a href="#">📚Mis Cursos</a></li>
-                <li><a href="#">💡Biblioteca Virtual</a></li>
+                <li><a href="Solicitudes.php">📝Solicitudes</a></li>
+                <li><a href="mis_cursos.php">📚Mis Cursos</a></li>
+                <li><a href="biblioteca.php">💡Biblioteca Virtual</a></li>
             </ul>
         </div>
 
@@ -52,8 +44,8 @@ $sesion_activa = isset($_SESSION['id_usuario']);
     <main class="contenido-pagina-principal">
         <div class="container-main">
             <div class="msg-bienvenida">
-                <h1>💫 Bienvenido a tu plataforma virtual educativa 💫</h1>
-                <h2> ¡Aprende, crece y transforma! </h2>
+            <?php echo "<h1>💫 Bienvenido " . htmlspecialchars($_SESSION['nombre_usuario']) . ", a tu plataforma virtual educativa 💫</h1>"; ?>
+            <h2>¡Aprende, crece y transforma!</h2>
             </div>
 
             <div class="descripcion-sitio">
@@ -124,47 +116,5 @@ $sesion_activa = isset($_SESSION['id_usuario']);
         </div>
     </section>
 </body>
-
-
-
-
-
-
-<script>
-
-    // Obtén el botón de menú y el contenedor desplegable
-    const dropdown = document.querySelector('.menu-desplegable .dropdown');
-
-    // Agrega un evento de clic para alternar la clase "active"
-    dropdown.addEventListener('click', function (event) {
-        // Evitar que el clic en el botón de menú cierre el menú
-        event.stopPropagation();
-        this.classList.toggle('active');
-    });
-
-    // Cerrar el menú si se hace clic fuera de él
-    document.addEventListener('click', function (event) {
-        // Si el clic no se realizó en el botón de menú ni en el menú desplegable, cerrarlo
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('active');
-        }
-    });
-
-    function toggleAnswer(id) {
-        const answer = document.getElementById(`answer-${id}`);
-        
-        // Alternar clase para mostrar u ocultar
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-    }
-
-    // Opcional: Ocultar todas las respuestas al inicio
-    document.addEventListener("DOMContentLoaded", () => {
-        const answers = document.querySelectorAll(".faq-answer");
-        answers.forEach(ans => ans.style.display = "none");
-    });
-</script>
+<script src="../assets/principal.js"></script>
 
