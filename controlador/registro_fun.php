@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verifica si la solicitud es de t
     $password = $_POST['password']; // La contraseña no se sanitiza aquí porque se va a hashear
     $confirmPassword = $_POST['confirm_password'];
     $numero_documento = htmlspecialchars(trim($_POST['numero_documento']));
+    $tipo_documento = htmlspecialchars(trim($_POST['tipo_documento'])); // Nuevo campo
 
     // Validaciones del lado del servidor
     if (empty($nombres) || strlen($nombres) < 5) {
@@ -53,16 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verifica si la solicitud es de t
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Preparar la consulta de inserción
-        $insertQuery = "INSERT INTO usuarios (nombre_usuario, apellido_usuario, correo_usuario, password_usuario, numero_documento) 
-                        VALUES (?, ?, ?, ?, ?)";
+        $insertQuery = "INSERT INTO usuarios (tipo_documento, numero_documento, nombre_usuario, apellido_usuario, correo_usuario, password_usuario) 
+                        VALUES (?, ?, ?, ?, ?, ?)";
         
         // Ejecutar la consulta de inserción
         $db->executeUpdate($insertQuery, [
+            $tipo_documento, // Agregar tipo de documento
+            $numero_documento, 
             $nombres, 
             $apellidos, 
             $email, 
-            $hashedPassword, 
-            $numero_documento
+            $hashedPassword
         ]);
 
         // Mensaje de éxito y redirección

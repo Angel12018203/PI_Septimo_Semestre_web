@@ -1,0 +1,28 @@
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; /* Fondo blanco para el select */
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+  }
+  
+  /* Estilo para el select cuando está enfocado */
+  .form-container select:focus {
+    border-color: #57d8ff; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+  }
+  
+  /* Estilo para el select cuando está deshabilitado */
+  .form-container select:disabled {
+    background-color: #f0f0f0; /* Color de fondo para el select deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor al pasar sobre el select deshabilitado */
+  }
+  
+  /* Opciones del select */
+  .form-container select option {
+    padding: 10px; /* Espaciado interno para las opciones */
+  }
