@@ -40,7 +40,7 @@ session_start();
       </div>
       <div class="form-container">
         <h2>Iniciar sesión</h2>
-        <form action="../controlador/login_fun.php" method="POST" autocomplete="off">
+        <form  action="../controlador/login_fun.php" method="POST" autocomplete="off">
           <input type="text" name="username" placeholder="Correo electrónico" required autocomplete="off">
           <input type="password" name="password" placeholder="Contraseña" required autocomplete="off"> 
           <button type="submit">Iniciar sesión</button>
@@ -51,5 +51,6 @@ session_start();
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

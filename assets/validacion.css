@@ -1,0 +1,33 @@
+input.tocado:valid {
+    border: 2px solid #28a745;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/190/190411.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+input.tocado:invalid {
+    border: 2px solid #dc3545;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/463/463612.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+/* Evitar iconos de validación en campos de tipo password */
+input[type="password"].tocado:valid,
+input[type="password"].tocado:invalid {
+    background-image: none;
+}
+
+/* Eliminar icono al enfocar */
+input:focus {
+    background-image: none;
+}
+
+/* Select solo si ha sido tocado */
+select.tocado:invalid {
+    border: 2px solid #dc3545;
+}
+select.tocado:valid {
+    border: 2px solid #28a745;
+}
