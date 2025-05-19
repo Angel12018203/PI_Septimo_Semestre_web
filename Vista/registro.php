@@ -25,7 +25,7 @@ header("Expires: 0");
 <body>
 
 <nav class="navbar">
-  <a href="../Vista/inicio.php" class="logo-link">
+  <a href="../Vista/index.php" class="logo-link">
     <img src="../img/reeduca.png" alt="Logotipo de ReEduca">
   </a>
   <div class="nav-links">
@@ -59,7 +59,7 @@ header("Expires: 0");
         required>
           <!-- Nuevo campo para el tipo de documento -->
           <label for="tipo_documento">Tipo de Documento:</label>
-        <select name="tipo_documento" id="tipo_documento" required>
+            <select name="tipo_documento" id="tipo_documento" required>
             <option value="" disabled selected>Seleccione un tipo de documento</option>
             <option value="RC">Registro Civil (RC)</option>
             <option value="TI">Tarjeta de Identidad (TI)</option>

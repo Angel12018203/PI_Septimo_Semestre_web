@@ -95,6 +95,46 @@ h1, h2, h3, h4 {
     flex: 1;
 }
 
+.informacion-usuario {
+    width: 95vw;
+    margin: 20px auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.solicitudes {
+    width: 95vw;
+    margin: 20px auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.mis-cursos {
+    width: 95vw;
+    margin: 20px auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.biblioteca {
+    width: 95vw;
+    margin: 20px auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
 .msg-bienvenida {
     display: flex;
     flex-direction: column;
@@ -398,5 +438,150 @@ h1, h2, h3, h4 {
     color: #c0ede4;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+}
 
+
+.formulario_informacion_usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ecfbff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.informacion-usuario h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.formulario_informacion_usuario:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/*---------------------------------------------------------------------*/
+.informacion-usuario {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-grid {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    box-sizing: border-box;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+  flex: 0 0 120px; /* ancho fijo */
+    text-align: right;
+    font-weight: 600;
+    user-select: none;
+}
+
+.form-group input {
+    flex: 1 1 auto;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    cursor: default;
+}
+
+.form-group select {
+    flex: 1 1 auto;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-width: 0;
+    background-color: white; /* mejora apariencia en algunos navegadores */
+}
+
+.form-row.botones {
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilo general de los botones */
+.form-row.botones button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón Actualizar (verde) */
+.form-row.botones button.actualizar {
+    background-color: #28a745;
+}
+.form-row.botones button.actualizar:hover {
+    background-color: #218838;
+}
+
+/* Modal estilos básicos */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
 }

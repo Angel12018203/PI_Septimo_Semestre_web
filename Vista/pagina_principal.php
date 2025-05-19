@@ -21,40 +21,40 @@ if (!isset($_SESSION['id_usuario'])) {
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar-pagina-principal">
-        <div class="logo-pagina-principal">
-                <div class="logo-pagina-principal">
-                    <a href="pagina_principal.php">
-                        <img src="../img/icono_de_logo_sin_formato_icon.png" alt="Logo" class="logo-img">
-                    </a>
-                </div>
-            <ul>
-                <li></li>
-                <li><a href="pagina_principal.php">🏠Página Principal</a></li>
-                <li><a href="Solicitudes.php">📝Solicitudes</a></li>
-                <li><a href="mis_cursos.php">📚Mis Cursos</a></li>
-                <li><a href="biblioteca.php">💡Biblioteca Virtual</a></li>
-            </ul>
-        </div>
+    <body>
+        <nav class="navbar-pagina-principal">
+            <div class="logo-pagina-principal">
+                    <div class="logo-pagina-principal">
+                        <a href="pagina_principal.php">
+                            <img src="../img/icono_de_logo_sin_formato_icon.png" alt="Logo" class="logo-img">
+                        </a>
+                    </div>
+                <ul>
+                    <li></li>
+                    <li><a href="pagina_principal.php">🏠Página Principal</a></li>
+                    <li><a href="solicitudes.php">📝Solicitudes</a></li>
+                    <li><a href="mis_cursos.php">📚Mis Cursos</a></li>
+                    <li><a href="biblioteca.php">💡Biblioteca Virtual</a></li>
+                </ul>
+            </div>
 
-        <div class="menu-desplegable">
-        <ul>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">👤Mi Perfil</a>
-                <div class="dropdown-content">
-                    <a href="#">Mi Información</a>
-                    <a href="../controlador/logout.php">Cerrar Sesión</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    </nav>
+            <div class="menu-desplegable">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">👤Mi Perfil</a>
+                        <div class="dropdown-content">
+                            <a href="informacion_usuario.php">Mi Información</a>
+                            <a href="../controlador/logout.php">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     
     <main class="contenido-pagina-principal">
         <div class="container-main">
             <div class="msg-bienvenida">
-            <?php echo "<h1>💫 Bienvenido " . htmlspecialchars($_SESSION['nombre_usuario']) . ", a tu plataforma virtual educativa 💫</h1>"; ?>
+            <?php echo "<h1>💫 " . htmlspecialchars($_SESSION['nombre_usuario']) . ", bienvenido a tu plataforma virtual educativa 💫</h1>"; ?>
             <h2>¡Aprende, crece y transforma!</h2>
             </div>
 
@@ -106,10 +106,10 @@ if (!isset($_SESSION['id_usuario'])) {
             <div class="ans-catalogo">
                 <h2>📦Gestión de Servicios</h2>
                 <div class="catalogo">
-                    <a href="#" target="_blank" class="btn-pdf">Ver los ANS</a>
+                    <a href="ANS.pdf" target="_blank" class="btn-pdf">Ver los ANS</a>
                 </div>
                 <div class="ans">
-                    <a href="#" target="_blank" class="btn-pdf">Catálogo de Servicios</a>
+                    <a href="CATÁLOGO.pdf" target="_blank" class="btn-pdf">Catálogo de Servicios</a>
                 </div>
             </div>
         </div>
@@ -127,4 +127,3 @@ if (!isset($_SESSION['id_usuario'])) {
     </section>
 </body>
 <script src="../assets/principal.js"></script>
-
