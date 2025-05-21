@@ -557,6 +557,13 @@ h2 {
     background-color: #218838;
 }
 
+.form-row.botones button.guardar {
+    background-color: #28a745;
+}
+.form-row.botones button.guardar:hover {
+    background-color: #218838;
+}
+
 /* Modal estilos básicos */
 .modal {
     position: fixed;
@@ -584,4 +591,26 @@ h2 {
     font-size: 1.5rem;
     cursor: pointer;
     user-select: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Centrado vertical */
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1000px; /* Aumenta este valor según lo grande que quieras */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }

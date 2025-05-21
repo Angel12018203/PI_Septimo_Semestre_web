@@ -17,7 +17,7 @@ try {
     $id_usuario = $_SESSION['id_usuario'];
 
     // Consulta para obtener datos del usuario
-    $sql = "SELECT nombre_usuario, apellido_usuario, tipo_documento, numero_documento, correo_usuario, celular, departamento, ciudad, fecha_nac FROM usuarios WHERE id_usuario = ?";
+    $sql = "SELECT id_usuario, nombre_usuario, apellido_usuario, tipo_documento, numero_documento, correo_usuario, celular, departamento, ciudad, fecha_nac FROM usuarios WHERE id_usuario = ?";
     $resultado = $conexion->executeQuery($sql, [$id_usuario]);
 
     $usuario = $resultado->fetch_assoc();
@@ -75,7 +75,6 @@ try {
             <h2>Información del perfil</h2>
             <div class="formulario_informacion_usuario">
                 <form class="formulario-grid">
-                <!-- Fila 1: Nombre y Apellido -->
                 <div class="form-row">
                     <div class="form-group">
                     <label for="nombre_usuario">Nombre: </label>
@@ -87,7 +86,6 @@ try {
                     </div>
                 </div>
 
-                <!-- Fila 2: Tipo y número de documento -->
                 <div class="form-row">
                     <div class="form-group">
                     <label for="tipo_documento">Tipo de documento: </label>
@@ -99,83 +97,141 @@ try {
                     </div>
                 </div>
 
-                <!-- Fila 3: Correo y celular -->
                 <div class="form-row">
                     <div class="form-group">
-                    <label for="correo_usuario">Correo electrónico: </label>
-                    <input type="email" id="correo_usuario" name="correo_usuario" value="<?php echo htmlspecialchars($usuario['correo_usuario']); ?>" readonly>
+                        <label for="correo_usuario">Correo electrónico: </label>
+                        <input type="email" id="correo_usuario" name="correo_usuario" 
+                            value="<?php echo htmlspecialchars($usuario['correo_usuario']); ?>" readonly>
                     </div>
                     <div class="form-group">
-                    <label for="celular">Celular: </label>
-                    <input type="text" id="celular" name="celular" value="<?php echo htmlspecialchars($usuario['celular']); ?>">
+                        <label for="celular">Celular: </label>
+                        <input type="text" id="celular" name="celular" 
+                            value="<?php echo htmlspecialchars($usuario['celular']); ?>" readonly>
                     </div>
                 </div>
 
-                <!-- Fila 4: Departamento y ciudad -->
                 <div class="form-row">
                     <div class="form-group">
-                    <label for="departamento">Departamento: </label>
-                    <select name="departamento" id="departamento" required onchange="setCiudad()">
-                        <option value="">Selecciona...</option>
-                        <option value="Amazonas">Amazonas</option>
-                        <option value="Antioquia">Antioquia</option>
-                        <option value="Arauca">Arauca</option>
-                        <option value="Atlántico">Atlántico</option>
-                        <option value="Distrito Capital">Bogotá D.C</option>
-                        <option value="Bolívar">Bolívar</option>
-                        <option value="Boyacá">Boyacá</option>
-                        <option value="Caldas">Caldas</option>
-                        <option value="Caquetá">Caquetá</option>
-                        <option value="Casanare">Casanare</option>
-                        <option value="Cauca">Cauca</option>
-                        <option value="Cesar">Cesar</option>
-                        <option value="Chocó">Chocó</option>
-                        <option value="Córdoba">Córdoba</option>
-                        <option value="Cundinamarca">Cundinamarca</option>
-                        <option value="Guainía">Guainía</option>
-                        <option value="Guaviare">Guaviare</option>
-                        <option value="Huila">Huila</option>
-                        <option value="Magdalena">Magdalena</option>
-                        <option value="Meta">Meta</option>
-                        <option value="Nariño">Nariño</option>
-                        <option value="Norte de Santander">Norte de Santander</option>
-                        <option value="Putumayo">Putumayo</option>
-                        <option value="Quindío">Quindío</option>
-                        <option value="Risaralda">Risaralda</option>
-                        <option value="Santander">Santander</option>
-                        <option value="Sucre">Sucre</option>
-                        <option value="Tolima">Tolima</option>
-                        <option value="Valle del Cauca">Valle del Cauca</option>
-                        <option value="Vichada">Vichada</option>
-                        <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-                    </select>
+                        <label for="departamento">Departamento: </label>
+                        <input type="text" id="departamento" name="departamento" 
+                        value="<?php echo htmlspecialchars($usuario['departamento']); ?>" readonly>
                     </div>
                     <div class="form-group">
-                    <label for="ciudad">Ciudad</label>
-                    <input type="text" id="ciudad" name="ciudad" value="<?php echo htmlspecialchars($usuario['ciudad']); ?>">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad" 
+                            value="<?php echo htmlspecialchars($usuario['ciudad']); ?>" readonly>
                     </div>
                 </div>
 
-                <!-- Fila 5: Fecha de nacimiento (único campo) -->
                 <div class="form-row">
                     <div class="form-group full-width">
-                    <label for="fecha_nac">Fecha de nacimiento: </label>
-                    <input type="date" id="fecha_nac" name="fecha_nac" value="<?php echo htmlspecialchars($usuario['fecha_nac']); ?>">
+                        <label for="fecha_nac">Fecha de nacimiento: </label>
+                        <input type="date" id="fecha_nac" name="fecha_nac" 
+                        value="<?php echo htmlspecialchars($usuario['fecha_nac']); ?>" readonly>
                     </div>
                 </div>
-                </form>
+
+
                 <div class="form-row botones">
                     <button type="button" class="actualizar" id="btnActualizar">Actualizar información</button>
                 </div>
-
+                <!-- Modal con formulario editable -->
                 <div id="modalActualizar" class="modal" style="display:none;">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Actualizar información</h2>
-                        <!-- Aquí puedes poner el formulario o campos para editar -->
-                        <p>Aquí va el formulario para actualizar los datos.</p>
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Actualizar información</h2>
+
+                    <form method="POST" action="../Modelo/guardar_info_usuario.php">
+                    <!-- Campo oculto para el ID -->
+                    <input type="text" name="id_usuario" value="<?php echo htmlspecialchars($usuario['id_usuario']); ?>" readonly hidden>
+
+                    <!-- Fila 1 -->
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label for="nombre_usuario_modal">Nombre: </label>
+                        <input type="text" id="nombre_usuario_modal" name="nombre_usuario_modal" value="<?php echo htmlspecialchars($usuario['nombre_usuario']); ?>">
+                        </div>
+                        <div class="form-group">
+                        <label for="apellido_usuario_modal">Apellido: </label>
+                        <input type="text" id="apellido_usuario_modal" name="apellido_usuario_modal" value="<?php echo htmlspecialchars($usuario['apellido_usuario']); ?>">
+                        </div>
                     </div>
+
+                    <!-- Fila 2 -->
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label for="tipo_documento_modal">Tipo de documento: </label>
+                        <input type="text" id="tipo_documento_modal" name="tipo_documento_modal" value="<?php echo htmlspecialchars($usuario['tipo_documento']); ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                        <label for="numero_documento_modal">Número de documento: </label>
+                        <input type="text" id="numero_documento_modal" name="numero_documento_modal" value="<?php echo htmlspecialchars($usuario['numero_documento']); ?>"readonly>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="form-row">
+                        <div class="form-group">
+                        <label for="correo_usuario_modal">Correo electrónico: </label>
+                        <input type="email" id="correo_usuario_modal" name="correo_usuario_modal" value="<?php echo htmlspecialchars($usuario['correo_usuario']); ?>">
+                        </div>
+                        <div class="form-group">
+                        <label for="celular_modal">Celular: </label>
+                        <input type="text" id="celular_modal" name="celular_modal" value="<?php echo htmlspecialchars($usuario['celular']); ?>">
+                        </div>
+                    </div>
+
+                    <!-- Fila 4 -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departamento_modal">Departamento: </label>
+                            <select name="departamento_modal" id="departamento_modal" required onchange="setCiudad()">
+                                <option value="">Selecciona...</option>
+                                <?php
+                                $departamentos = [
+                                    "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bogotá", "Bolívar", "Boyacá", "Caldas",
+                                    "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Guainía",
+                                    "Guaviare", "Huila", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo",
+                                    "Quindío", "Risaralda", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vichada",
+                                    "San Andrés y Providencia"
+                                ];
+
+                                foreach ($departamentos as $dep) {
+                                    $selected = ($usuario['departamento'] === $dep) ? 'selected' : '';
+                                    echo "<option value=\"$dep\" $selected>$dep</option>";
+                                }
+                                ?>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                        <label for="ciudad_modal">Ciudad: </label>
+                        <input type="text" id="ciudad_modal" name="ciudad_modal" value="<?php echo htmlspecialchars($usuario['ciudad']); ?>">
+                        </div>
+                    </div>
+
+                    <!-- Fila 5 -->
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                        <label for="fecha_nac_modal">Fecha de nacimiento: </label>
+                        <input type="date" id="fecha_nac_modal" name="fecha_nac_modal" value="<?php echo htmlspecialchars($usuario['fecha_nac']); ?>">
+                        </div>
+                    </div>
+
+                    <!-- Botón para enviar -->
+                    <div class="form-row botones">
+                        <button type="submit" class="guardar">Guardar cambios</button>
+                    </div>
+                    </form>
                 </div>
+                </div>
+
+                </div>
+
+
+                </div>
+                <script src="../assets/modal-info-usuario.js"></script>
+                </main>
 
             </div>
             <script src="../assets/modal-info-usuario.js"></script>
@@ -195,6 +251,5 @@ try {
                 a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
             </div>
         </section>
-    </body>
-    <script src="../assets/principal.js"></script>
+
 </html>
