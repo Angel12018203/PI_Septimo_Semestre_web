@@ -177,7 +177,7 @@ $fecha_nac_val = ($usuario['fecha_nac'] === "0000-00-00" || empty($usuario['fech
                             $departamentos = [
                                 "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bogotá", "Bolívar", "Boyacá", "Caldas",
                                 "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Guainía",
-                                "Guaviare", "Huila", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo",
+                                "Guaviare", "Huila", "Magdalena","La Guajira", "Meta", "Nariño", "Norte de Santander", "Putumayo",
                                 "Quindío", "Risaralda", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vichada",
                                 "San Andrés y Providencia"
                             ];
