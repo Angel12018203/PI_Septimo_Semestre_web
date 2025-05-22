@@ -31,7 +31,7 @@ header("Expires: 0");
   <div class="nav-links">
     <a href="../Vista/index.php">Inicio</a>
     <a href="../Vista/Portal_educativo.php">Portal Educativo</a>
-    <a href="#">Acerca de</a>
+    <a href="../Vista/acerda_de.php">Acerca de</a>
     <a href="#">Contacto</a>
   </div>
 </nav>

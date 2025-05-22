@@ -17,7 +17,7 @@
     <img src="../img/reeduca.png" href="../Vista/index.php"   alt="Logotipo">
     <a href="../Vista/index.php">Inicio</a>
     <a href="../Vista/Login.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
-    <a href="#">Acerca de</a>
+    <a href="../Vista/acerda_de.php">Acerca de</a>
     <a href="#">Contacto</a>
   </div>
 

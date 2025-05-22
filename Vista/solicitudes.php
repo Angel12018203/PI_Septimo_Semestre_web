@@ -90,7 +90,7 @@ $resultado = $db->executeQuery($sql, [$id_usuario]);
             <div class="contenedor-solicitudes">
                 <div class="encabezado-solicitudes">
                     <div class="titulos-solicitudes">
-                        <h2>Bienvenido a solicitudes</h2>
+                        <h2>Bienvenido a tus solicitudes</h2>
                         <h3>Aquí podrás gestionar y obtener un seguimiento de tus solicitudes hechas, con el fin de poder dar continuidad a tus estudios.</h3>
                     </div>
                     <a href="crear_solicitud.php" class="btn-crear-solicitud">+ Crear Solicitud</a>
