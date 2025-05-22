@@ -1,24 +1,24 @@
-// JavaScript para abrir y cerrar modal
-const btnActualizar = document.getElementById('btnActualizar');
-const modal = document.getElementById('modalActualizar');
-const closeBtn = modal.querySelector('.close');
-const btnCerrarModal = document.getElementById('btnCerrarModal');
+document.addEventListener('DOMContentLoaded', function () {
+    const btnActualizar = document.getElementById('btnActualizar');
+    const modal = document.getElementById('modalActualizar');
+    const closeBtn = modal ? modal.querySelector('.close') : null;
 
-btnActualizar.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
+    if (btnActualizar && modal) {
+        btnActualizar.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+    }
 
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+    if (closeBtn && modal) {  
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
 
-btnCerrarModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// También para cerrar el modal al hacer clic fuera del contenido
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
