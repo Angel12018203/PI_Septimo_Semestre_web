@@ -115,6 +115,21 @@ h1, h2, h3, h4 {
     flex: 1;
 }
 
+.form-container h2{
+    font-family: Arial, sans-serif;
+}
+
+
+.form-container {
+    width: 95vw;
+    margin: 20px auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
 .mis-cursos {
     width: 95vw;
     margin: 20px auto; /* Centra horizontalmente */
@@ -726,3 +741,116 @@ font-weight: bold;}
     padding: 0.5rem;
     text-align: center;
 }
+
+.solicitudes h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #003b5c;
+}
+
+.solicitudes h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contenedor-solicitudes {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ecfbff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.encabezado-solicitudes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.encabezado-solicitudes h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.btn-crear-solicitud {
+    background-color: #61d2ff;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-crear-solicitud:hover {
+    background-color: #48bfee;
+}
+
+.lista-solicitudes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.solicitud-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #61d2ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.solicitud-item p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.solicitud-item span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.titulos-solicitudes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 70%;
+}
+
+/* Estilos para la tabla de solicitudes */
+.tabla-solicitudes table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: inherit;
+}
+
+.tabla-solicitudes th,
+.tabla-solicitudes td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-solicitudes th {
+    background-color: #61d2ff;
+    color: white;
+    font-weight: bold;
+}
+
+.tabla-solicitudes tr:hover {
+    background-color: #f5faff;
+}
+
+.text-primary { color: #0d6efd; }
+.text-warning { color: #ffc107; }
+.text-success { color: #198754; }
+.text-danger { color: #dc3545; }
+.text-secondary { color: #6c757d; }
