@@ -11,11 +11,11 @@ $db = new Conexion();
 $id_usuario = $_SESSION['id_usuario'];
 
 // Verificar si ya completó los datos personales
-$datos = $db->executeQuery("SELECT tipo_documento, departamento, ciudad, celular, fecha_nac FROM usuarios WHERE id_usuario = ?", [$id_usuario])->fetch_assoc();
+/*$datos = $db->executeQuery("SELECT tipo_documento, departamento, ciudad, celular, fecha_nac FROM usuarios WHERE id_usuario = ?", [$id_usuario])->fetch_assoc();
 if (!$datos['tipo_documento'] || !$datos['departamento'] || !$datos['ciudad'] || !$datos['celular'] || !$datos['fecha_nac']) {
     header("Location: completar_datos.php");
     exit();
-}
+}*/
 
 // Contar cuántas solicitudes tiene el usuario
 $consultaSolicitudes = $db->executeQuery("SELECT COUNT(*) AS total FROM solicitudes WHERE id_usuario = ?", [$id_usuario]);

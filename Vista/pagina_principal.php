@@ -66,9 +66,9 @@ if (!isset($_SESSION['id_usuario'])) {
             <div class="empieza-ahora">
                 <h2>📚 ¡Empieza ahora! 🚀</h2>
                 <ul>
-                    <li><a href="" class="btn-solicitudes">Solicitudes</a></li>
-                    <li><a href="" class="btn-Mis-cursos">Mis cursos</a></li>
-                    <li><a href="" class="btn-biblioteca-virtual">Biblioteca Virtual</a></li>
+                    <li><a href="solicitudes.php" class="btn-solicitudes">Solicitudes</a></li>
+                    <li><a href="mis_cursos.php" class="btn-Mis-cursos">Mis cursos</a></li>
+                    <li><a href="biblioteca.php" class="btn-biblioteca-virtual">Biblioteca Virtual</a></li>
                 </ul>
             </div>
 
@@ -116,14 +116,26 @@ if (!isset($_SESSION['id_usuario'])) {
     </main>
 
     <section class="seccion-logo">
-        <div class="logo-container">
-            <img src="../img/imagen_3.png" alt="Logo">
+    <div class="logo-container">
+        <img src="../img/imagen_3.png" alt="Logo">
+    </div>
+    <div class="linea-separadora"></div>
+    <div class="text-container">
+        <p>Reeduca es una plataforma web diseñada para brindarte la oportunidad de finalizar tus estudios. Ofrecemos segundas oportunidades
+        a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
+    </div>
+    <div class="contactanos-container">
+        <h3>Contáctanos</h3>
+        <div class="iconos-contacto">
+            <a href="https://wa.me/tu_numero" target="_blank" aria-label="WhatsApp">
+                📱
+            </a>
+            <a href="mailto:tu_correo@ejemplo.com" target="_blank" aria-label="Correo">
+                📧
+            </a>
         </div>
-        <div class="linea-separadora"></div>
-        <div class="text-container">
-            <p>Reeduca es una plataforma web diseñada para brindarte la oportunidad de finalizar tus estudios. Ofrecemos segundas oportunidades
-            a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
-        </div>
-    </section>
+    </div>
+</section>
+
 </body>
 <script src="../assets/principal.js"></script>

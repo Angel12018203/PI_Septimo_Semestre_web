@@ -14,7 +14,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
 <!DOCTYPE html>
     <head>
-        <title>Información de Usuario</title>
+        <title>Mis Cursos</title>
         <link rel="stylesheet" href="../assets/styles-principal-page.css">
         <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
@@ -51,8 +51,68 @@ if (!isset($_SESSION['id_usuario'])) {
         </nav>
 
         <main class="mis-cursos">
-            <h1>Bienvenido a tus cursos</h1>
+            <h2>Bienvenido a tus cursos</h2>
+            <h3>Aquí podrás encontrar los cursos que te han sido habilitados de acuerdo a los registros que se encuentran en la base de datos del Ministerio de Educación. Los niveles de los cursos dependerán de tu nivel de conocimientos.</h3>
+            <section class="contenedor-tarjetas-cursos">
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/matematicas.jpg" alt="Matemáticas 1">
+                    </div>
+                    <div class="nombre-curso">Matemáticas 1</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/ciencias_sociales.jpg" alt="Ciencias Sociales 1">
+                    </div>
+                    <div class="nombre-curso">Ciencias Sociales 1</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/lengua_castellana.jpg" alt="Lengua Castellana 2">
+                    </div>
+                    <div class="nombre-curso">Lengua Castellana 2</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/fisica.jpg" alt="Física 1">
+                    </div>
+                    <div class="nombre-curso">Física 1</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/ciencias_naturales.jpg" alt="Ciencias Naturales 1">
+                    </div>
+                    <div class="nombre-curso">Ciencias Naturales 1</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/tecnologia_e_informatica.jpg" alt="Tecnología e Informática">
+                    </div>
+                    <div class="nombre-curso">Tecnología e Informática</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/ciencias_politicas.jpg" alt="Ciencias Políticas">
+                    </div>
+                    <div class="nombre-curso">Ciencias Políticas</div>
+                </a>
+
+                <a href="#" class="tarjeta-curso">
+                    <div class="imagen-curso">
+                        <img src="../assets/quimica.jpg" alt="Química 1">
+                    </div>
+                    <div class="nombre-curso">Química 1</div>
+                </a>
+            </section>
         </main>
+
+
 
         <section class="seccion-logo">
             <div class="logo-container">

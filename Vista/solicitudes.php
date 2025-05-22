@@ -14,7 +14,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
 <!DOCTYPE html>
     <head>
-        <title>Información de Usuario</title>
+        <title>Solicitudes Reinserción Académica</title>
         <link rel="stylesheet" href="../assets/styles-principal-page.css">
         <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
