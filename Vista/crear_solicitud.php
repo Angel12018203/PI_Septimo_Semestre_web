@@ -20,11 +20,11 @@ if (!$datos['tipo_documento'] || !$datos['departamento'] || !$datos['ciudad'] ||
 // Contar cuántas solicitudes tiene el usuario
 $consultaSolicitudes = $db->executeQuery("SELECT COUNT(*) AS total FROM solicitudes WHERE id_usuario = ?", [$id_usuario]);
 $totalSolicitudes = $consultaSolicitudes->fetch_assoc()['total'];
-
+/*
 if ($totalSolicitudes >= 4) {
     echo "<script>alert('Ya has alcanzado el límite de 3 solicitudes.'); window.location.href='solicitudes.php';</script>";
     exit();
-}
+}*/
 
 // Procesar formulario
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

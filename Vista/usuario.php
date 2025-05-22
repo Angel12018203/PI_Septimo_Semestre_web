@@ -14,7 +14,6 @@ $sesion_activa = isset($_SESSION['id_usuario']);
   <meta charset="UTF-8">
   <title>Panel de Usuario</title>
   <link rel="stylesheet" href="../assets/navegador_menu_usuario.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>

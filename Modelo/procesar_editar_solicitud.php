@@ -7,21 +7,21 @@ function limpiarEntrada($entrada) {
 
 try {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $id = limpiarEntrada($_POST['id']);
-        $estado = limpiarEntrada($_POST['estado']);
-        $observacion = limpiarEntrada($_POST['observacion']);
+        $id_solicitud = limpiarEntrada($_POST['id_solicitud']);
+        $estado = limpiarEntrada($_POST['estado_solicitud']);
+        $observaciones = limpiarEntrada($_POST['observaciones']);
 
         // Validar datos
-        if (empty($id) || empty($estado)) {
+        if (empty($id_solicitud) || empty($estado)) {
             throw new Exception("Faltan datos obligatorios.");
         }
 
         // Conectar a la base de datos
         $db = new Conexion();
 
-        // Actualizar estado y observación
-        $sql = "UPDATE solicitudes SET estado = ?, observacion = ? WHERE id = ?";
-        $params = [$estado, $observacion, $id];
+        // Actualizar estado y observaciones en la tabla 'solicitudes'
+        $sql = "UPDATE solicitudes SET estado_solicitud = ?, observaciones = ?, fecha_respuesta = CURDATE() WHERE id_solicitud = ?";
+        $params = [$estado, $observaciones, $id_solicitud];
 
         $db->executeUpdate($sql, $params);
         $db->close();
