@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="../assets/styles-principal-page.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
     <style>
         body {
             background-color: #f7f7f7;
@@ -162,6 +163,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
             </div>
         </section>
+        <a href="https://wa.me/573228337441?text=Necesito%20su%20colaboracion" 
+            class="whatsapp-float" 
+            target="_blank" 
+            title="Contáctanos por WhatsApp">
+                <img src="../assets/whatsapp-icon-free-png.webp" alt="WhatsApp" class="whatsapp-icon">
+        </a>
     </body>
 <script src="../assets/principal.js"></script>
 </html>

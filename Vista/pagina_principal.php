@@ -20,7 +20,7 @@ if (!isset($_SESSION['id_usuario'])) {
     <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
+    <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
 </head>
     <body>
         <nav class="navbar-pagina-principal">
@@ -107,7 +107,7 @@ if (!isset($_SESSION['id_usuario'])) {
             <div class="ans-catalogo">
                 <h2>📦Gestión de Servicios</h2>
                 <div class="catalogo">
-                    <a href="ANS.pdf" target="_blank" class="btn-pdf">Ver los ANS</a>
+                    <a href="ANS.pdf" target="_blank" class="btn-pdf">Catálogo de Servicios</a>
                 </div>
                 <div class="ans">
                     <a href="CATÁLOGO.pdf" target="_blank" class="btn-pdf">Catálogo de Servicios</a>
@@ -124,17 +124,6 @@ if (!isset($_SESSION['id_usuario'])) {
     <div class="text-container">
         <p>Reeduca es una plataforma web diseñada para brindarte la oportunidad de finalizar tus estudios. Ofrecemos segundas oportunidades
         a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
-    </div>
-    <div class="contactanos-container">
-        <h3>Contáctanos</h3>
-        <div class="iconos-contacto">
-            <a href="https://wa.me/tu_numero" target="_blank" aria-label="WhatsApp">
-                📱
-            </a>
-            <a href="mailto:tu_correo@ejemplo.com" target="_blank" aria-label="Correo">
-                📧
-            </a>
-        </div>
     </div>
 </section>
 <!-- Botón flotante de WhatsApp con imagen -->

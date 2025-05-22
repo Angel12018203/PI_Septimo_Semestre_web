@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/inicio.css">
   <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
+  <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
 </head>
 <body>
 
@@ -82,6 +83,12 @@
     </div>
   </section>
   <script src="../assets/index.js"></script>
+  <a href="https://wa.me/573228337441?text=Necesito%20su%20colaboracion" 
+    class="whatsapp-float" 
+    target="_blank" 
+    title="Contáctanos por WhatsApp">
+      <img src="../assets/whatsapp-icon-free-png.webp" alt="WhatsApp" class="whatsapp-icon">
+  </a>
 </body>
 </html>
 

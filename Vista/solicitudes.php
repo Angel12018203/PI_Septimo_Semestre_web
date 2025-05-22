@@ -53,6 +53,8 @@ $resultado = $db->executeQuery($sql, [$id_usuario]);
         <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
+        <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
     </head>
     <body>
         <nav class="navbar-pagina-principal">
@@ -113,11 +115,10 @@ $resultado = $db->executeQuery($sql, [$id_usuario]);
                             echo "<tr>";
                             echo "<td>" . htmlspecialchars($fila['id_solicitud']) . "</td>";
                             echo "<td>" . htmlspecialchars($fila['fecha_envio']) . "</td>";
-                            echo "<td>" . htmlspecialchars($fila['descripcion']) . "</td>";
+                            echo '<td style="word-break: break-word; max-width: 200px; white-space: normal;">' . htmlspecialchars($fila['descripcion']) . '</td>';
                             echo "<td>" . htmlspecialchars($fila['observaciones']) . "</td>";
                             echo "<td>" . htmlspecialchars($fila['fecha_respuesta']) . "</td>";
 
-                            // Aquí cambiamos solo la celda del estado_solicitud con clase para el color de texto
                             echo '<td class="';
                             if ($fila['estado_solicitud'] == 'Enviado') echo 'text-primary';
                             elseif ($fila['estado_solicitud'] == 'En proceso') echo 'text-warning';
@@ -130,13 +131,19 @@ $resultado = $db->executeQuery($sql, [$id_usuario]);
                         }
                         echo "</tbody>";
                         echo "</table>";
-                    } else {
-                        echo "<p>No has creado ninguna solicitud aún.</p>";
-                    }
+
+                        // Botón debajo de la tabla
+                        echo '<div style="text-align: center; margin-top: 1rem;">
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScXrukzbl_nNQJbqPn6YWzAXm_szK2SgFKsjzPv4-CtCpu1Ng/viewform?usp=dialog" class="btn-crear-solicitud" target= "_blank">Encuesta de Satisfacción</a>
+                                </div>';
+                        } else {
+                            echo "<p>No has creado ninguna solicitud aún.</p>";
+                        }
                     ?>
                 </div>
             </div>
         </main>
+
 
 
 
@@ -151,6 +158,13 @@ $resultado = $db->executeQuery($sql, [$id_usuario]);
                 a aquellas personas que han sido víctimas del conflicto armado en nuestro país, permitiéndoles acceder a una educación flexible y de calidad.</p>
             </div>
         </section>
+        <a href="https://wa.me/573228337441?text=Necesito%20su%20colaboracion" 
+            class="whatsapp-float" 
+            target="_blank" 
+            title="Contáctanos por WhatsApp">
+                <img src="../assets/whatsapp-icon-free-png.webp" alt="WhatsApp" class="whatsapp-icon">
+            </a>
     </body>
+    
     <script src="../assets/principal.js"></script>
 </html>
