@@ -1,0 +1,14 @@
+usuario: admins_pajaro
+contraseña: contrasena_es_verde
+Servidor: Localhost
+
+DROP DATABASE IF EXISTS nombre_de _la base_de_datos;
+
+ruta:
+cd C:\xampp\mysql\bin
+
+MySQL -h localhost -u root -p
+MySQL -h localhost -u admins_pajaro -p
+
+
+source mudanza_bd/nombre_del_archivo_de_db.sql;
