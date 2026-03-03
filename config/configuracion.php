@@ -5,5 +5,5 @@ require_once '../config/conexion.php';
 const DB_HOST = 'localhost';
 const DB_USERNAME = 'admins_pajaro';
 const DB_PASSWORD = 'contrasena_es_verde';
-const DB_NAME = 'reeduca_db';
+const DB_NAME = 'reeduca';
 ?>

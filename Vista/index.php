@@ -8,17 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/inicio.css">
   <link rel="icon" href="../img/icono_de_icon_web_probando_formato_icon.ico">
-
- 
+  <link rel="stylesheet" href="../assets/pagina_principal_whatssaqpt.css">
 </head>
 <body>
 
   <!-- Barra de navegación -->
   <div class="navbar">
-    <img src="../img/reeduca.png" href="../Vista/inicio.php"   alt="Logotipo">
-    <a href="../Vista/inicio.php">Inicio</a>
-    <a href="../Vista/Portal_educativo.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
-    <a href="#">Acerca de</a>
+    <img src="../img/reeduca.png" href="../Vista/index.php"   alt="Logotipo">
+    <a href="../Vista/index.php">Inicio</a>
+    <a href="../Vista/Login.php">Portal Educativo</a> <!-- ← ENLACE ACTUALIZADO -->
+    <a href="../Vista/acerda_de.php">Acerca de</a>
     <a href="#">Contacto</a>
   </div>
 
@@ -84,5 +83,14 @@
     </div>
   </section>
   <script src="../assets/index.js"></script>
+  <a href="https://wa.me/573228337441?text=Necesito%20su%20colaboracion" 
+    class="whatsapp-float" 
+    target="_blank" 
+    title="Contáctanos por WhatsApp">
+      <img src="../assets/whatsapp-icon-free-png.webp" alt="WhatsApp" class="whatsapp-icon">
+  </a>
 </body>
 </html>
+
+
+
